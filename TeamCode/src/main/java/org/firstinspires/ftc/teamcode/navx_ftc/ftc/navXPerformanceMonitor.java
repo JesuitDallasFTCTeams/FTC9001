@@ -1,8 +1,5 @@
 package org.firstinspires.ftc.teamcode.navx_ftc.ftc;
 
-/**
- * Created by skantare on 9/14/16.
- */
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
