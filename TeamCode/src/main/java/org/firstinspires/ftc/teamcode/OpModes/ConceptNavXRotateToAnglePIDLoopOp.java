@@ -27,10 +27,12 @@ import java.text.DecimalFormat;
 @TeleOp(name = "Concept: navX Rotate to Angle PID - Loop", group = "Concept")
 // @Disabled Comment this in to remove this from the Driver Station OpMode List
 public class ConceptNavXRotateToAnglePIDLoopOp extends OpMode {
-    DcMotor leftMotor;
-    DcMotor rightMotor;
+    DcMotor leftBackMotor;
+    DcMotor rightFrontMotor;
+    DcMotor leftFrontMotor;
+    DcMotor rightBackMotor;
 
-    /* This is the port on the Core Device Interface Module        */
+    /* This is the port on the Core Device Interface Module       */
     /* in which the navX-Model Device is connected.  Modify this  */
     /* depending upon which I2C port you are using.               */
     private final int NAVX_DIM_I2C_PORT = 0;
@@ -40,7 +42,7 @@ public class ConceptNavXRotateToAnglePIDLoopOp extends OpMode {
 
     private final byte NAVX_DEVICE_UPDATE_RATE_HZ = 50;
 
-    private final double TARGET_ANGLE_DEGREES = 90.0;
+    private final double TARGET_ANGLE_DEGREES = 270.0;
     private final double TOLERANCE_DEGREES = 2.0;
     private final double MIN_MOTOR_OUTPUT_VALUE = -1.0;
     private final double MAX_MOTOR_OUTPUT_VALUE = 1.0;
@@ -55,15 +57,19 @@ public class ConceptNavXRotateToAnglePIDLoopOp extends OpMode {
 
     @Override
     public void init() {
-        leftMotor = hardwareMap.dcMotor.get("left motor");
-        rightMotor = hardwareMap.dcMotor.get("right motor");
+        leftBackMotor = hardwareMap.dcMotor.get("leftBackMotor");
+        rightBackMotor = hardwareMap.dcMotor.get("rightBackMotor");
+        leftFrontMotor=hardwareMap.dcMotor.get("leftFrontMotor");
+        rightFrontMotor = hardwareMap.dcMotor.get("rightFrontMotor");
+
 
         navx_device = AHRS.getInstance(hardwareMap.deviceInterfaceModule.get("dim"),
                 NAVX_DIM_I2C_PORT,
                 AHRS.DeviceDataType.kProcessedData,
                 NAVX_DEVICE_UPDATE_RATE_HZ);
 
-        rightMotor.setDirection(DcMotor.Direction.REVERSE);
+        rightFrontMotor.setDirection(DcMotor.Direction.REVERSE);
+        rightBackMotor.setDirection(DcMotor.Direction.REVERSE);
 
         /* If possible, use encoders when driving, as it results in more */
         /* predictable drive system response.                           */
@@ -111,13 +117,17 @@ public class ConceptNavXRotateToAnglePIDLoopOp extends OpMode {
              */
             if (yawPIDController.isNewUpdateAvailable(yawPIDResult)) {
                 if (yawPIDResult.isOnTarget()) {
-                    leftMotor.setPowerFloat();
-                    rightMotor.setPowerFloat();
+                    leftFrontMotor.setPowerFloat();
+                    rightFrontMotor.setPowerFloat();
+                    leftBackMotor.setPowerFloat();
+                    rightBackMotor.setPowerFloat();
                     telemetry.addData("Motor Output", df.format(0.00));
                 } else {
                     double output = yawPIDResult.getOutput();
-                    leftMotor.setPower(output);
-                    rightMotor.setPower(-output);
+                    leftFrontMotor.setPower(output);
+                    rightFrontMotor.setPower(-output);
+                    leftBackMotor.setPower(output);
+                    rightBackMotor.setPower(-output);
                     telemetry.addData("Motor Output", df.format(output) + ", " +
                             df.format(-output));
                 }
