@@ -3,14 +3,17 @@ package org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects;
 /**
  * Created by skantare on 9/15/16.
  */
-import org.lasarobotics.vision.util.MathUtil;
-import org.lasarobotics.vision.util.color.Color;
-import org.lasarobotics.vision.util.color.ColorSpace;
+
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.MathUtil;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.color.Color;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.color.ColorSpace;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 
 import java.util.List;
+
+
 
 /**
  * A detectable object

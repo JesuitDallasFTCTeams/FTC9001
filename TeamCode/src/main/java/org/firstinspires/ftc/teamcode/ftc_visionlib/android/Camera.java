@@ -6,8 +6,6 @@ package org.firstinspires.ftc.teamcode.ftc_visionlib.android;
 
 import android.content.pm.PackageManager;
 
-import com.qualcomm.robotcore.util.Util;
-
 import org.opencv.core.Size;
 
 import java.util.ArrayList;

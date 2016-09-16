@@ -3,18 +3,21 @@ package org.firstinspires.ftc.teamcode.ftc_visionlib.ftc.vortex;
 /**
  * Created by skantare on 9/15/16.
  */
+
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.ColorBlobDetector;
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Ellipse;
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Rectangle;
-import org.lasarobotics.vision.util.MathUtil;
-import org.lasarobotics.vision.util.ScreenOrientation;
-import org.lasarobotics.vision.util.color.ColorHSV;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.MathUtil;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.ScreenOrientation;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.color.ColorHSV;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 
 import java.text.DecimalFormat;
+
+
 
 /**
  * Beacon location and analysis

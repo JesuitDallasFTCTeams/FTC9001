@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.ftc_visionlib.ftc.vortex;
 /**
  * Created by skantare on 9/15/16.
  */
+
 import android.util.Log;
 
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.ColorBlobDetector;
@@ -11,10 +12,10 @@ import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Contour;
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Detectable;
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Ellipse;
 import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Rectangle;
-import org.lasarobotics.vision.image.Drawing;
-import org.lasarobotics.vision.util.MathUtil;
-import org.lasarobotics.vision.util.ScreenOrientation;
-import org.lasarobotics.vision.util.color.ColorRGBA;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.image.Drawing;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.MathUtil;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.ScreenOrientation;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.color.ColorRGBA;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Rect;
@@ -22,6 +23,8 @@ import org.opencv.core.RotatedRect;
 import org.opencv.core.Size;
 
 import java.util.List;
+
+
 
 /**
  * Static beacon analysis methods

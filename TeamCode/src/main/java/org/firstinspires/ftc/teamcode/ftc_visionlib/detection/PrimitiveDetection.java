@@ -3,11 +3,12 @@ package org.firstinspires.ftc.teamcode.ftc_visionlib.detection;
 /**
  * Created by skantare on 9/15/16.
  */
-import org.lasarobotics.vision.detection.objects.Contour;
-import org.lasarobotics.vision.detection.objects.Ellipse;
-import org.lasarobotics.vision.detection.objects.Rectangle;
-import org.lasarobotics.vision.image.Filter;
-import org.lasarobotics.vision.util.MathUtil;
+
+import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Contour;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Ellipse;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects.Rectangle;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.image.Filter;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.MathUtil;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
@@ -15,6 +16,8 @@ import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 /**
  * Implements primitive (ellipse, polygon) detection based on a custom, highly-robust (size and position invariant) version of the Hough transform

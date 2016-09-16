@@ -4,8 +4,6 @@ package org.firstinspires.ftc.teamcode.ftc_visionlib.detection.objects;
  * Created by skantare on 9/15/16.
  */
 
-import com.vuforia.Rectangle;
-
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;

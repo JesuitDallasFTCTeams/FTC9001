@@ -13,10 +13,9 @@ import android.hardware.SensorManager;
 import android.view.Surface;
 import android.view.WindowManager;
 
-import com.qualcomm.robotcore.util.Util;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.ScreenOrientation;
+import org.firstinspires.ftc.teamcode.ftc_visionlib.util.Vector3;
 
-import org.lasarobotics.vision.util.ScreenOrientation;
-import org.lasarobotics.vision.util.Vector3;
 
 /**
  * Contains methods for reading Android native sensors, other than the camera
