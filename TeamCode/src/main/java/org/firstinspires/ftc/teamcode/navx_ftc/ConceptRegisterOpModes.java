@@ -9,6 +9,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpModeRegistrar;
 
 import org.firstinspires.ftc.teamcode.OpModes.ConceptNavXDriveStraightPIDLoopOp;
 import org.firstinspires.ftc.teamcode.OpModes.ConceptNavXRotateToAnglePIDLoopOp;
+import org.firstinspires.ftc.teamcode.OpModes.ConceptNavXZeroYawOp;
 
 /**
  * This class demonstrates how to manually register opmodes.
@@ -61,7 +62,7 @@ public class ConceptRegisterOpModes
         // manager.register("LEGO Light",             SensorLEGOLight.class);
         // manager.register("LEGO Touch",             SensorLEGOTouch.class);
         // manager.register("MR Color",               SensorMRColor.class);
-        // manager.register("MR Gyro",                SensorMRGyro.class);
+         manager.register("ConceptNavXZeroYawOp",                ConceptNavXZeroYawOp.class);
          manager.register("ConceptNavXDriveStraightPIDLoopOp",           ConceptNavXDriveStraightPIDLoopOp.class);
          manager.register("ConceptNavXRotateToAnglePIDLoopOp",                 ConceptNavXRotateToAnglePIDLoopOp.class);
 
